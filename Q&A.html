@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A & Get a Quote | Patrick print</title>
+    <meta name="description" content="Frequently Asked Questions (FAQs) about printing services and a form to request a custom printing quote from Patrick print.">
+    <meta name="keywords" content="printing FAQs, printing questions Rwanda, get a print quote, Patrick print quote, printing estimate">
+    <link rel="icon" href="images.1/Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        .sticky-header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .active-link {
+            color: #1d4ed8; /* blue-700 */
+            font-weight: 600;
+        }
+        /* Custom styles for Q&A page */
+        .qa-header-bg {
+            background-color: #059669; /* emerald-600 */
+            color: #ffffff;
+        }
+        .qa-section-bg {
+            background-color: #f0fdf4; /* emerald-50 */
+        }
+        .qa-card-bg {
+            background-color: #ffffff;
+        }
+        .qa-button-color {
+            background-color: #047857; /* emerald-700 */
+        }
+        .qa-button-color:hover {
+            background-color: #065f46; /* emerald-800 */
+        }
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0; /* gray-200 */
+            font-weight: 600;
+            color: #10b981; /* emerald-500 */
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding-bottom: 0;
+            color: #4b5563; /* gray-600 */
+        }
+        .faq-answer.open {
+            max-height: 200px; /* Adjust as needed */
+            padding-bottom: 1rem;
+        }
+        .faq-question .icon {
+            transition: transform 0.3s ease-out;
+        }
+        .faq-question .icon.rotate {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <header id="header" class="sticky-header bg-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+    <img src="images.1/Logo.jpg" alt="Patrick print logo" class="h-8 w-auto mr-2" style="max-height:32px;display:inline-block;vertical-align:middle;" />
+    <span class="text-xl font-bold text-blue-800 align-middle">Patrick print</span>
+</div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+                <a href="events-printing.html" class="text-gray-600 hover:text-blue-600 transition">Events Printing</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                <a href="Q&A.html" class="text-blue-800 font-medium hover:text-blue-600 transition active-link">Q&A</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="index.html" class="py-2 text-gray-600">Home</a>
+                <a href="services.html" class="py-2 text-gray-600">Services</a>
+                <a href="about.html" class="py-2 text-gray-600">About</a>
+                <a href="contact.html" class="py-2 text-gray-600">Contact</a>
+                <a href="Q&A.html" class="py-2 text-blue-800 font-medium active-link">Q&A</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 qa-header-bg text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold mb-4">Your Questions, Our Answers & Quick Quotes</h1>
+                <p class="text-xl max-w-2xl mx-auto">
+                    Find answers to common questions about our printing services or request a personalized quote for your next project.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 qa-section-bg">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What is your typical turnaround time for printing orders?</span>
+                            <i class="fas fa-chevron-right icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="py-4">Turnaround times vary by service and quantity. Standard business cards or flyers can be ready in 1-2 business days. Larger or more complex projects, like books or large format banners, may take 5-7 business days. We also offer expedited services for urgent needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer graphic design services?</span>
+                            <i class="fas fa-chevron-right icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="py-4">Yes, we have an in-house team of experienced graphic designers who can help you create stunning designs from scratch, or refine your existing artwork to be print-ready. Simply select "Graphic Design Services" in the quote form.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What file formats do you accept for print-ready artwork?</span>
+                            <i class="fas fa-chevron-right icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="py-4">We prefer PDF (press-ready with bleeds), but also accept Adobe Illustrator (AI), Photoshop (PSD), EPS, and high-resolution JPEG/PNG files. Please ensure all fonts are outlined and images are embedded.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I get a sample of your print quality?</span>
+                            <i class="fas fa-chevron-right icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="py-4">Absolutely! We can provide samples of our paper stocks, finishes, and general print quality upon request. Please visit our office or contact us to arrange for samples.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you deliver printing orders within Kigali or Rwanda?</span>
+                            <i class="fas fa-chevron-right icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="py-4">Yes, we offer delivery services within Kigali and can arrange for shipping across Rwanda. Delivery fees may apply depending on the order size and location. Please inquire when requesting a quote.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are your payment options?</span>
+                            <i class="fas fa-chevron-right icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="py-4">We accept bank transfers, mobile money payments (MTN MoMo, Airtel Money), and cash. For larger orders, a deposit may be required before production begins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 qa-section-bg">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-emerald-700">Request a Custom Printing Quote</h2>
+                <div class="max-w-3xl mx-auto qa-card-bg p-8 rounded-lg shadow-md">
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="full-name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                                <input type="text" id="full-name" name="full-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Your Full Name" required>
+                            </div>
+                            <div>
+                                <label for="company-name" class="block text-gray-700 text-sm font-bold mb-2">Company Name (Optional)</label>
+                                <input type="text" id="company-name" name="company-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Your Company">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="your.email@example.com" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="+250 7XX XXX XXX">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="service-type" class="block text-gray-700 text-sm font-bold mb-2">Type of Service Needed</label>
+                            <select id="service-type" name="service-type" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" required>
+                                <option value="">Select a Service</option>
+                                <option value="Business Cards Printing">Business Cards Printing</option>
+                                <option value="Large Format Printing">Large Format Printing</option>
+                                <option value="Flyers & Brochures Printing">Flyers & Brochures Printing</option>
+                                <option value="Book & Magazine Printing">Book & Magazine Printing</option>
+                                <option value="Branded Promotional Items">Branded Promotional Items</option>
+                                <option value="Posters & Stickers">Posters & Stickers</option>
+                                <option value="Customized Packaging & Labels">Customized Packaging & Labels</option>
+                                <option value="Invitations & Greeting Cards">Invitations & Greeting Cards</option>
+                                <option value="Signage & Office Branding">Signage & Office Branding</option>
+                                <option value="Graphic Design Services">Graphic Design Services</option>
+                                <option value="Other">Other (Please specify below)</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="quantity" class="block text-gray-700 text-sm font-bold mb-2">Desired Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="e.g., 500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="project-details" class="block text-gray-700 text-sm font-bold mb-2">Project Details / Specifications</label>
+                            <textarea id="project-details" name="project-details" rows="6" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Describe your project: dimensions, colors, materials, deadlines, special requests, etc." required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="artwork-upload" class="block text-gray-700 text-sm font-bold mb-2">Upload Artwork/Files (Optional)</label>
+                            <p class="text-gray-600 text-xs mb-2">Accepted formats: JPG, PNG, PDF, AI, PSD (Max size: 10MB)</p>
+                            <input type="file" id="artwork-upload" name="artwork-upload" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button type="submit" class="qa-button-color hover:qa-button-color text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                                Submit Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/250780446477" target="_blank" class="whatsapp-button bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Patrick print</h3>
+                <p class="text-gray-400">Your trusted partner for high-quality printing services in Rwanda.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                    <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    <li><a href="Q&A.html" class="text-gray-400 hover:text-white transition">Q&A</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i> KN 87 Street, Downtown Kigali, Rwanda</p>
+                <p class="text-gray-400 mb-2"><i class="fas fa-phone-alt mr-2"></i> +250780446477</p>
+                <p class="text-gray-400 mb-2"><i class="fas fa-envelope mr-2"></i> <a href="mailto:ishimwepatrick570@gmail.com" class="text-gray-400 hover:text-white transition">ishimwepatrick570@gmail.com</a></p>
+                <p class="text-gray-400 mb-2"><i class="fas fa-clock mr-2"></i> Mon - Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 mt-8 border-t border-gray-700 pt-8">
+            © 2025 Patrick print. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('.icon');
+                
+                answer.classList.toggle('open');
+                icon.classList.toggle('rotate');
+            });
+        });
+    </script>
+</body>
+</html>

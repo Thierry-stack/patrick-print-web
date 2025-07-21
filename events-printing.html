@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Printing | Patrick print</title>
+    <meta name="description" content="Specialized event printing services in Kigali: wedding invitations, banners, programs, backdrops, souvenirs, and more.">
+    <meta name="keywords" content="event printing Rwanda, wedding invitations, banners, event programs, souvenirs, Patrick print">
+    <link rel="icon" href="images.1/Logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        .sticky-header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .active-link {
+            color: #1d4ed8; /* blue-700 */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <header id="header" class="sticky-header bg-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images.1/Logo.jpg" alt="Patrick print logo" class="h-8 w-auto mr-2" style="max-height:32px;display:inline-block;vertical-align:middle;" />
+<span class="text-xl font-bold text-blue-800 align-middle">Patrick print</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 transition">Services</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="events-printing.html" class="text-blue-800 font-medium hover:text-blue-600 transition active-link">Events Printing</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                <a href="Q&A.html" class="text-gray-600 hover:text-blue-600 transition">Q&A</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Home</a>
+            <a href="services.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Services</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">About</a>
+            <a href="events-printing.html" class="block py-2 text-blue-800 font-medium hover:text-blue-600 transition active-link">Events Printing</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Contact</a>
+            <a href="Q&A.html" class="block py-2 text-gray-600 hover:text-blue-600 transition">Q&amp;A &amp; Quote</a>
+        </div>
+    </header>
+    <main>
+        <section class="relative py-16 text-yellow-400 text-center" style="background: url('images/event.banner.jpg') center/cover no-repeat; min-height: 340px;">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative container mx-auto px-4">
+                <h1 class="text-4xl font-extrabold mb-4">Events Printing</h1>
+                <p class="text-xl font-bold max-w-2xl mx-auto">
+                    Make your events unforgettable with our premium event printing services. From weddings and parties to conferences and launches, we bring your vision to life with stunning print solutions.
+                </p>
+            </div>
+        </section>
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Event Printing Service 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="images.1/wedding.jpg" alt="Wedding Invitations" class="rounded mb-4 w-full h-48 object-cover">
+                        <h2 class="text-xl font-bold mb-2">Wedding Invitations</h2>
+                        <p class="text-gray-600 text-center">Custom-designed invitations, RSVP cards, and thank-you notes to set the tone for your special day.</p>
+                    </div>
+                    <!-- Event Printing Service 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="images.1/Booklets.jpg" alt="Event Programs & Booklets" class="rounded mb-4 w-full h-48 object-cover">
+                        <h2 class="text-xl font-bold mb-2">Event Programs & Booklets</h2>
+                        <p class="text-gray-600 text-center">Beautifully printed programs, schedules, and booklets for weddings, conferences, and ceremonies.</p>
+                    </div>
+                    <!-- Event Printing Service 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="images.1/banner.jpg" alt="Banners & Backdrops" class="rounded mb-4 w-full h-48 object-cover">
+                        <h2 class="text-xl font-bold mb-2">Banners & Backdrops</h2>
+                        <p class="text-gray-600 text-center">Eye-catching banners, roll-ups, and stage backdrops to make your event stand out.</p>
+                    </div>
+                    <!-- Event Printing Service 4 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="images.1/giveaways.jpg" alt="Souvenirs & Giveaways" class="rounded mb-4 w-full h-48 object-cover">
+                        <h2 class="text-xl font-bold mb-2">Souvenirs & Giveaways</h2>
+                        <p class="text-gray-600 text-center">Branded mugs, t-shirts, bags, and more for memorable event keepsakes.</p>
+                    </div>
+                    <!-- Event Printing Service 5 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="images.1/ticket.jpg" alt="Tickets & Badges" class="rounded mb-4 w-full h-48 object-cover">
+                        <h2 class="text-xl font-bold mb-2">Tickets & Badges</h2>
+                        <p class="text-gray-600 text-center">Secure and stylish event tickets, badges, and passes for all types of gatherings.</p>
+                    </div>
+                    <!-- Event Printing Service 6 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <img src="images.1/directional.1.jpg" alt="Directional Signage" class="rounded mb-4 w-full h-48 object-cover">
+                        <h2 class="text-xl font-bold mb-2">Directional Signage</h2>
+                        <p class="text-gray-600 text-center">Custom signage to guide your guests and create a seamless event experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="https://wa.me/250788123456" target="_blank" class="whatsapp-button bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').onclick = function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        };
+        // Sticky header on scroll
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
